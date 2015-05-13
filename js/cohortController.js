@@ -1,5 +1,5 @@
 makerMix.controller('CohortController', [function() {
-
+    
     var self = this;
 
     self.cohort = [
