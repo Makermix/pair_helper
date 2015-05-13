@@ -12,11 +12,9 @@
   </head>
 
   <body ng-controller="CohortController as cohortCtrl">
-    Helloooo
+    List of makers:
     <ul class="list-group" ng-repeat="maker in cohortCtrl.cohort[0].individuals">
-      <li>
-        <p>{{maker.name}}</p
-      </li>
+      <li>{{maker.name}}</li>
     </ul>
   </body>
 </html>
