@@ -1,18 +1,30 @@
 describe('when displaying cohort', function() {
 
-    var cohort = [
-        {"id": 1,
-            individuals : [
-            {
-                "name": "James"
-            },
-            {
-                "name": "Rich"
-            }]
-        }
-    ];
+    describe ('CohortController', function () {
+        beforeEach(module('MakerMix'));
 
-    it('receives the cohort list', function() {
-        expect(ctrl.cohort).toEqual(cohort);
+        var ctrl;
+
+        beforeEach(inject(function($controller) {
+            ctrl = $controller('CohortController');
+        }));
+
+        var cohort = [
+            {"id": 1,
+                individuals : [
+                {
+                    "name": "James"
+                },
+                {
+                    "name": "Rich"
+                }]
+            }
+        ];
+
+        it('receives the cohort list', function() {
+            expect(ctrl.cohort).toEqual(cohort);
+        });
+
     });
+
 });
