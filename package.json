@@ -1,0 +1,28 @@
+{
+  "name": "pair_helper",
+  "version": "1.0.0",
+  "description": "Do all dev on development branch, don't fuck with master",
+  "main": "index.js",
+  "directories": {
+    "test": "test"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/GJMcGowan/pair_helper.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/GJMcGowan/pair_helper/issues"
+  },
+  "homepage": "https://github.com/GJMcGowan/pair_helper",
+  "devDependencies": {
+    "karma": "^0.12.31",
+    "karma-chrome-launcher": "^0.1.12",
+    "karma-jasmine": "^0.3.5",
+    "karma-phantomjs-launcher": "^0.1.4"
+  }
+}
