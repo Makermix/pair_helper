@@ -22,16 +22,21 @@
       <div class="container-fluid">
       <!-- Nav left -->
         <div class="navbar-header">
-         <img src="http://www.makersacademy.com/images/logo.png" height="50" width="270">
+         <img src="http://www.makersacademy.com/images/logo.png" height="52" width="272">
           </a>
         </div>
       <!-- Nav right -->
       <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-        <ul class="nav navbar-nav navbar-right">
-          <li><button ng-show="viewCtrl.isView(1)" ng-click="viewCtrl.setView(2)">Cohort</button></li>
-          <li><button ng-show="viewCtrl.isView(2)" ng-click="viewCtrl.setView(1)">Home</button></li>
-          <li><button type="submit">Log out</button></li>
-        </ul>
+        <div class="form-group">
+          <form class="navbar-form navbar-right">
+          <ul class="nav navbar-nav navbar-right">
+            <li id="pad"><button ng-show="viewCtrl.isView(1)" ng-click="viewCtrl.setView(2)" class="btn btn-warning">Cohort</button></li>
+            <li id="pad"><button ng-show="viewCtrl.isView(2)" ng-click="viewCtrl.setView(1)" class="btn btn-warning">Home</button></li>
+            <li id="pad"><button type="submit" class="btn btn-warning">Log out</button></li>
+            </ul>
+          </ul>
+          </form>
+        </div>
       </div>
       </div>
     </nav>
@@ -39,8 +44,12 @@
 
     <!-- Landing page -->
     <div ng-show="viewCtrl.isView(1)" class="jumbotron" id="wrap">
+      <img src="public/makermix_dog.png">
+      <br>
+      <br>
       <h1>Hello, #NAME</h1>
-      <p><a class="btn btn-primary btn-lg" id="woofbtn" role="button">WOOF!</a></p>
+      <br>
+      <p><a class="btn btn-warning btn-lg" id="woofbtn" role="button">WOOF!</a></p>
     </div>
     <!-- END Landing page -->
 
@@ -52,7 +61,7 @@
           {{maker.name}}
         </li>
       </ul>
-    <p><a class="btn btn-primary btn-lg" href="#" role="button">Pair Everyone</a></p>
+    <p><a class="btn btn-warning btn-lg" href="#" role="button">Pair Everyone</a></p>
     </div>
     <!-- END Cohort page -->
 
