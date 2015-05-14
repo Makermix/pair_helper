@@ -13,7 +13,7 @@
 
   <body ng-controller="CohortController as cohortCtrl">
     List of makers:
-    <ul class="list-group" ng-repeat="maker in cohortCtrl.cohort[0].individuals">
+    <ul class="list-group" ng-repeat="maker in cohortCtrl.cohort.users">
       <li>{{maker.name}}</li>
     </ul>
   </body>

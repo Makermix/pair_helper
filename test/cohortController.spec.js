@@ -3,26 +3,38 @@ describe('when displaying cohort', function() {
     describe ('CohortController', function () {
         beforeEach(module('MakerMix'));
 
-        var ctrl;
-
         beforeEach(inject(function($controller) {
             ctrl = $controller('CohortController');
         }));
+        var ctrl;
 
-        var cohort = [
-            {"id": 1,
-                individuals : [
-                {
-                    "name": "James"
-                },
-                {
-                    "name": "Rich"
-                }]
-            }
-        ];
+        describe('when displaying the page', function() {
+            var httpBackend;
+            beforeEach(inject(function($httpBackend) {
+                httpBackend = $httpBackend
+                httpBackend
+                    .when("GET", "https://makermix.herokuapp.com/cohorts/1")
+                    .respond(
+                      {items: items}
+                    );
+            }));
 
-        it('receives the cohort list', function() {
-            expect(ctrl.cohort).toEqual(cohort);
+            var items = [
+                {"id": 1,
+                    individuals : [
+                    {
+                        "name": "James"
+                    },
+                    {
+                        "name": "Rich"
+                    }]
+                }
+            ];
+
+            it('receives the cohort list', function() {
+                httpBackend.flush();
+                expect(ctrl.cohort.items).toEqual(items);
+            });
         });
 
     });
