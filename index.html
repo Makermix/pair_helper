@@ -13,6 +13,7 @@
     <script src="js/app.js"></script>
     <script src="js/cohortController.js"></script>
     <script src="js/viewController.js"></script>
+    <script src="js/userController.js"></script>
   </head>
 
   <body ng-controller="ViewController as viewCtrl">
@@ -38,8 +39,9 @@
     <!-- END Navbar -->
 
     <!-- Landing page -->
-    <div ng-show="viewCtrl.isView(1)" class="jumbotron" id="wrap">
-      <h1>Hello, #NAME</h1>
+    <div ng-controller="UserController as userCtrl" ng-show="viewCtrl.isView(1)" class="jumbotron" id="wrap">
+      <h1>What's yo name?</h1>
+      <input type="text" ng-model="userCtrl.userName">
       <p><a class="btn btn-primary btn-lg" id="woofbtn" role="button">WOOF!</a></p>
     </div>
     <!-- END Landing page -->
