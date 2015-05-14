@@ -48,7 +48,7 @@
     <div class="" id="wrap" ng-controller="CohortController as cohortCtrl">
       <h2>March Cohort</h2>
       <ul class="list-group">
-        <li class="list-group-item" ng-repeat="maker in cohortCtrl.cohort[0].individuals">
+        <li class="list-group-item" ng-repeat="maker in cohortCtrl.cohort.users">
           {{maker.name}}
         </li>
       </ul>
