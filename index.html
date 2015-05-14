@@ -40,25 +40,24 @@
     <!-- END Navbar -->
 
     <!-- Landing page -->
-    <div class="jumbotron">
+    <div class="jumbotron" id="wrap">
       <h1>Hello, #NAME</h1>
       <p><a class="btn btn-primary btn-lg" href="#" role="button">Pair me</a></p>
     </div>
     <!-- END Landing page -->
 
     <!-- Cohort page -->
-    <div ng-controller="CohortController as cohortCtrl">
-      March Cohort
-      <ul class="list-group-item">
-
-        <li ng-repeat="maker in cohortCtrl.cohort[0].individuals">
+    <div class="" id="wrap" ng-controller="CohortController as cohortCtrl">
+      <h2>March Cohort</h2>
+      <ul class="list-group">
+        <li class="list-group-item" ng-repeat="maker in cohortCtrl.cohort[0].individuals">
           {{maker.name}}
         </li>
       </ul>
+    <p><a class="btn btn-primary btn-lg" href="#" role="button">Pair Everyone</a></p>
     </div>
 
-      <p><a class="btn btn-primary btn-lg" href="#" role="button">Pair Everyone</a></p>
-      <!-- END Cohort page -->
+    <!-- END Cohort page -->
 
 
   </body>
