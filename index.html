@@ -3,7 +3,10 @@
   <head>
     <meta charset="utf-8">
     <title>Cohort Pairing</title>
-    <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap-theme.min.css">
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="css/custom.css">
     <script src="bower_components/jquery/dist/jquery.js"></script>
     <script src="bower_components/angular/angular.js"></script>
     <script src="bower_components/angular-resource/angular-resource.js"></script>
@@ -11,10 +14,47 @@
     <script src="js/cohortController.js"></script>
   </head>
 
-  <body ng-controller="CohortController as cohortCtrl">
-    List of makers:
-    <ul class="list-group" ng-repeat="maker in cohortCtrl.cohort.users">
-      <li>{{maker.name}}</li>
-    </ul>
+  <body>
+
+    <!-- Navbar -->
+    <nav class="navbar navbar-default">
+      <div class="container-fluid">
+      <!-- Nav left -->
+        <div class="navbar-header">
+         <img src="http://www.makersacademy.com/images/logo.png" height="50" width="270">
+          </a>
+        </div>
+      <!-- Nav right -->
+      <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+        <ul class="nav navbar-nav navbar-right">
+          <li><a href="#">Cohort</a></li>
+          <form class="navbar-form navbar-left" role="search">
+          <button type="submit" class="btn btn-default">Log out</button>
+          </form>
+        </ul>
+      </div>
+      </div>
+    </nav>
+    <!-- END Navbar -->
+
+    <!-- Landing page -->
+    <div class="jumbotron" id="wrap">
+      <h1>Hello, #NAME</h1>
+      <p><a class="btn btn-primary btn-lg" href="#" role="button">Pair me</a></p>
+    </div>
+    <!-- END Landing page -->
+
+    <!-- Cohort page -->
+    <div class="" id="wrap" ng-controller="CohortController as cohortCtrl">
+      <h2>March Cohort</h2>
+      <ul class="list-group">
+        <li class="list-group-item" ng-repeat="maker in cohortCtrl.cohort.users">
+          {{maker.name}}
+        </li>
+      </ul>
+    <p><a class="btn btn-primary btn-lg" href="#" role="button">Pair Everyone</a></p>
+    </div>
+    <!-- END Cohort page -->
+
   </body>
 </html>
