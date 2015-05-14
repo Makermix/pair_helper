@@ -47,12 +47,26 @@
     <!-- Cohort page -->
     <div ng-show="viewCtrl.isView(2)" id="wrap" ng-controller="CohortController as cohortCtrl">
       <h2>March Cohort</h2>
-      <ul class="list-group">
-        <li class="list-group-item" ng-repeat="maker in cohortCtrl.cohort.users">
-          {{maker.name}}
-          <input ng-model="maker.nothanks" type="checkbox"><span class="badge">3</span>
-        </li>
-      </ul>
+      <table class="table table-striped">
+        <thead>
+        <tr>
+          <th>Name</th>
+          <th>Times Paired With</th>
+          <th>No Thanks</th>
+          </tr>
+        </thead>
+        <tbody>
+      <!-- <ul class="list-group"> -->
+      <tr ng-repeat="maker in cohortCtrl.cohort.users">
+        <td>
+          {{maker.name}}</td>
+          <td><input ng-model="maker.nothanks" type="checkbox"></td>
+          <td><span class="badge">3</span></td>
+
+        </tr>
+      <!-- </ul> -->
+        </tbody>
+      </table>
     <p><a class="btn btn-primary btn-lg" href="#" role="button">Pair Everyone</a></p>
     </div>
     <!-- END Cohort page -->
