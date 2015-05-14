@@ -8,7 +8,7 @@
     <link rel="stylesheet" href="css/custom.css">
     <script src="bower_components/jquery/dist/jquery.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
-    <script src="bower_components/angular/angular.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.3.15/angular.min.js"></script>
     <script src="bower_components/angular-resource/angular-resource.js"></script>
     <script src="js/app.js"></script>
     <script src="js/cohortController.js"></script>
@@ -42,7 +42,8 @@
     <div ng-controller="UserController as userCtrl" ng-show="viewCtrl.isView(1)" class="jumbotron" id="wrap">
       <h1>What's yo name?</h1>
       <input type="text" ng-model="userCtrl.userName">
-      <p><a class="btn btn-primary btn-lg" id="woofbtn" role="button">WOOF!</a></p>
+      <p><a class="btn btn-primary btn-lg" id="woofbtn" role="button" ng-click='userCtrl.outputName()'>WOOF!</a></p>
+      <div id="userReadout">{{userCtrl.userBox}}</div>
     </div>
     <!-- END Landing page -->
 
