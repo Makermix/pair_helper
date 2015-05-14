@@ -1,14 +1,18 @@
 describe('Cohort Display', function() {
-  it('has a title', function() {
-    browser.get('http://localhost:8080');
 
+  beforeEach(function(){
+    browser.get('http://localhost:4567');
+  });
+
+  it('has a title', function() {
     expect(browser.getTitle()).toEqual('Cohort Pairing');
   });
 
-  it('should have the right names in the html', function() {
-    browser.get('http://localhost:8080');
+  it('has a WOOF button', function() {
+    expect(browser.isElementPresent(by.id('woofbtn'))).toBe(true);
+  });
 
-    expect(element(by.binding('maker.name')).getText()).
-        toEqual('James');
+  xit('should have the right names in the html', function() {
+    expect(element.all(by.binding('maker.name')).getText()).toEqual('James');
   });
 });
