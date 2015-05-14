@@ -5,16 +5,17 @@
     <title>Cohort Pairing</title>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap-theme.min.css">
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
     <link rel="stylesheet" href="css/custom.css">
     <script src="bower_components/jquery/dist/jquery.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
     <script src="bower_components/angular/angular.js"></script>
     <script src="bower_components/angular-resource/angular-resource.js"></script>
     <script src="js/app.js"></script>
     <script src="js/cohortController.js"></script>
+    <script src="js/viewController.js"></script>
   </head>
 
-  <body>
+  <body ng-controller="ViewController as viewCtrl">
 
     <!-- Navbar -->
     <nav class="navbar navbar-default">
@@ -27,10 +28,9 @@
       <!-- Nav right -->
       <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
         <ul class="nav navbar-nav navbar-right">
-          <li><a href="#">Cohort</a></li>
-          <form class="navbar-form navbar-left" role="search">
-          <button type="submit" class="btn btn-default">Log out</button>
-          </form>
+          <li><button ng-show="viewCtrl.isView(1)" ng-click="viewCtrl.setView(2)">Cohort</button></li>
+          <li><button ng-show="viewCtrl.isView(2)" ng-click="viewCtrl.setView(1)">Home</button></li>
+          <li><button type="submit">Log out</button></li>
         </ul>
       </div>
       </div>
@@ -38,14 +38,14 @@
     <!-- END Navbar -->
 
     <!-- Landing page -->
-    <div class="jumbotron" id="wrap">
+    <div ng-show="viewCtrl.isView(1)" class="jumbotron" id="wrap">
       <h1>Hello, #NAME</h1>
-      <p><a class="btn btn-primary btn-lg" href="#" role="button">Pair me</a></p>
+      <p><a class="btn btn-primary btn-lg" id="woofbtn" role="button">WOOF!</a></p>
     </div>
     <!-- END Landing page -->
 
     <!-- Cohort page -->
-    <div class="" id="wrap" ng-controller="CohortController as cohortCtrl">
+    <div ng-show="viewCtrl.isView(2)" id="wrap" ng-controller="CohortController as cohortCtrl">
       <h2>March Cohort</h2>
       <ul class="list-group">
         <li class="list-group-item" ng-repeat="maker in cohortCtrl.cohort.users">
