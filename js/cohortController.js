@@ -1,17 +1,7 @@
-makerMix.controller('CohortController', [function() {
-
+makerMix.controller('CohortController', ['$resource', function($resource) {
     var self = this;
+    var apiResource = $resource('https://makermix.herokuapp.com/cohorts/1');
 
-    self.cohort = [
-        {"id": 1,
-        individuals : [
-            {
-            "name": "James"
-            },
-            {
-            "name": "Rich"
-            }
-        ]}
-    ];
+    self.cohort = apiResource.get();
 
 }]);
