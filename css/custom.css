@@ -4,7 +4,42 @@
   width: 50%;
   text-align: center;
   margin: 0 auto;
+  background-color:  #990000;
+  border-radius: 10px;
+  padding: 10px;
+}
+
+#pad {
+  padding: 0 10px;
 }
 
 body {
+  background-color: #330000;
+}
+
+h2 {
+  color: #ffffff;
+}
+
+.jumbotron h1,
+.jumbotron .h1 {
+  color: #ffffff;
+  padding: 10px;
+}
+
+.jumbotron {
+  background-color:  #990000;
+  border-radius: 10px;
+  }
+
+.btn-default {
+   background-color:  #999999;
+  }
+
+#inputBox {
+  margin: 0 0 30px 0;
+  height: 50px;
+  width: 300px;
+  font-size: 16pt;
+  padding: 10px;
 }

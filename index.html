@@ -23,16 +23,21 @@
       <div class="container-fluid">
       <!-- Nav left -->
         <div class="navbar-header">
-         <img src="http://www.makersacademy.com/images/logo.png" height="50" width="270">
+         <img src="http://www.makersacademy.com/images/logo.png" height="52" width="272">
           </a>
         </div>
       <!-- Nav right -->
       <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-        <ul class="nav navbar-nav navbar-right">
-          <li><button ng-show="viewCtrl.isView(1)" ng-click="viewCtrl.setView(2)">Cohort</button></li>
-          <li><button ng-show="viewCtrl.isView(2)" ng-click="viewCtrl.setView(1)">Home</button></li>
-          <li><button type="submit">Log out</button></li>
-        </ul>
+        <div class="form-group">
+          <form class="navbar-form navbar-right">
+          <ul class="nav navbar-nav navbar-right">
+            <li id="pad"><button ng-show="viewCtrl.isView(1)" ng-click="viewCtrl.setView(2)" class="btn btn-warning">Cohort</button></li>
+            <li id="pad"><button ng-show="viewCtrl.isView(2)" ng-click="viewCtrl.setView(1)" class="btn btn-warning">Home</button></li>
+            <li id="pad"><button type="submit" class="btn btn-warning">Log out</button></li>
+            </ul>
+          </ul>
+          </form>
+        </div>
       </div>
       </div>
     </nav>
@@ -40,8 +45,12 @@
 
     <!-- Landing page -->
     <div ng-controller="UserController as userCtrl" ng-show="viewCtrl.isView(1)" class="jumbotron" id="wrap">
+      <img src="public/makermix_dog.png">
+      <br>
+      <br>
       <h1>What's yo name?</h1>
-      <input type="text" ng-model="userCtrl.userName">
+      <br>
+      <input id="inputBox" type="text" ng-model="userCtrl.userName">
       <p><a class="btn btn-primary btn-lg" id="woofbtn" role="button">WOOF!</a></p>
     </div>
     <!-- END Landing page -->
@@ -49,12 +58,26 @@
     <!-- Cohort page -->
     <div ng-show="viewCtrl.isView(2)" id="wrap" ng-controller="CohortController as cohortCtrl">
       <h2>March Cohort</h2>
-      <ul class="list-group">
-        <li class="list-group-item" ng-repeat="maker in cohortCtrl.cohort.users">
-          {{maker.name}}
-          <input ng-model="maker.nothanks" type="checkbox"><span class="badge">3</span>
-        </li>
-      </ul>
+      <table class="table table-striped">
+        <thead>
+        <tr>
+          <th>Name</th>
+          <th>Times Paired With</th>
+          <th>No Thanks</th>
+          </tr>
+        </thead>
+        <tbody>
+      <!-- <ul class="list-group"> -->
+      <tr ng-repeat="maker in cohortCtrl.cohort.users">
+        <td>
+          {{maker.name}}</td>
+          <td><input ng-model="maker.nothanks" type="checkbox"></td>
+          <td><span class="badge">3</span></td>
+
+        </tr>
+      <!-- </ul> -->
+        </tbody>
+      </table>
     <p><a class="btn btn-primary btn-lg" href="#" role="button">Pair Everyone</a></p>
     </div>
     <!-- END Cohort page -->
