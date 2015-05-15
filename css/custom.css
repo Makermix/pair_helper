@@ -44,6 +44,11 @@ h2 {
   padding: 10px;
 }
 
-.tables-striped {
+#white {
   background-color: #ffffff;
+}
+
+.greeting-text {
+  color: #ffffff;
+  font-size: 16pt;
 }

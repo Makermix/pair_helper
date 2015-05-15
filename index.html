@@ -47,21 +47,22 @@
       <img src="public/makermix_dog.png">
       <h1>What's yo name?</h1>
       <input id="inputBox" type="text" ng-model="userCtrl.userName">
-      <p><a class="btn btn-primary btn-lg" id="woofbtn" role="button" ng-click='userCtrl.outputName()'>WOOF!</a></p>
-      <div id="userReadout" ng-hide="userCtrl.hidden">Hi {{userCtrl.userName}}</div>
-      <div id="pairReadout" ng-hide="userCtrl.hidden">You are paired with {{userCtrl.userBox.name}}</div>
+      <p><a class="btn btn-warning btn-lg" id="woofbtn" role="button" ng-click='userCtrl.outputName()'>WOOF!</a></p>
+      <div id="userReadout" ng-hide="userCtrl.hidden" class="greeting-text">Hi {{userCtrl.userName}}</div>
+      <div id="pairReadout" ng-hide="userCtrl.hidden" class="greeting-text">You are paired with <strong>{{userCtrl.userBox.name}}</strong></div>
     </div>
     <!-- END Landing page -->
 
     <!-- Cohort page -->
     <div ng-show="viewCtrl.isView(2)" id="wrap" ng-controller="CohortController as cohortCtrl">
       <h2>March Cohort</h2>
+      <div id="white">
       <table class="table table-striped">
         <thead>
         <tr>
           <th>Name</th>
-          <th>Times Paired With</th>
           <th>No Thanks</th>
+          <th>Times Paired With</th>
           </tr>
         </thead>
         <tbody>
@@ -76,7 +77,8 @@
       <!-- </ul> -->
         </tbody>
       </table>
-    <p><a class="btn btn-primary btn-lg" href="#" role="button">Pair Everyone</a></p>
+    </div>
+    <p><a class="btn btn-warning btn-lg" href="#" role="button">Pair Everyone</a></p>
     </div>
     <!-- END Cohort page -->
 
