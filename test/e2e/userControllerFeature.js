@@ -11,6 +11,6 @@ describe('User Controller', function() {
     it('should accept a name from a user', function () {
         userNameBox.sendKeys('James');
         submitUserButton.click();
-        expect(userReadout.getText()).toEqual('James')
+        expect(userReadout.getText()).toEqual('Hi James')
     });
 });
