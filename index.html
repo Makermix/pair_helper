@@ -13,6 +13,7 @@
     <script src="js/app.js"></script>
     <script src="js/cohortController.js"></script>
     <script src="js/viewController.js"></script>
+    <script src="js/userController.js"></script>
   </head>
 
   <body ng-controller="ViewController as viewCtrl">
@@ -43,13 +44,14 @@
     <!-- END Navbar -->
 
     <!-- Landing page -->
-    <div ng-show="viewCtrl.isView(1)" class="jumbotron" id="wrap">
+    <div ng-controller="UserController as userCtrl" ng-show="viewCtrl.isView(1)" class="jumbotron" id="wrap">
       <img src="public/makermix_dog.png">
       <br>
       <br>
-      <h1>Hello, #NAME</h1>
+      <h1>What's yo name?</h1>
       <br>
-      <p><a class="btn btn-warning btn-lg" id="woofbtn" role="button">WOOF!</a></p>
+      <input id="inputBox" type="text" ng-model="userCtrl.userName">
+      <p><a class="btn btn-primary btn-lg" id="woofbtn" role="button">WOOF!</a></p>
     </div>
     <!-- END Landing page -->
 

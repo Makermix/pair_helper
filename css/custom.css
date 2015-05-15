@@ -35,3 +35,11 @@ h2 {
 .btn-default {
    background-color:  #999999;
   }
+
+#inputBox {
+  margin: 0 0 30px 0;
+  height: 50px;
+  width: 300px;
+  font-size: 16pt;
+  padding: 10px;
+}
