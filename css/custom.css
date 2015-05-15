@@ -43,3 +43,12 @@ h2 {
   font-size: 16pt;
   padding: 10px;
 }
+
+#white {
+  background-color: #ffffff;
+}
+
+.greeting-text {
+  color: #ffffff;
+  font-size: 16pt;
+}
