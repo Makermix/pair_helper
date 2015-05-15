@@ -45,7 +45,7 @@
     <!-- Landing page -->
     <div ng-controller="UserController as userCtrl" ng-show="viewCtrl.isView(1)" class="jumbotron" id="wrap">
       <img src="public/makermix_dog.png">
-      <h1>What's yo name?</h1>
+      <h1>What's your name?</h1>
       <input id="inputBox" type="text" ng-model="userCtrl.userName">
       <p><a class="btn btn-primary btn-lg" id="woofbtn" role="button" ng-click='userCtrl.outputName()'>WOOF!</a></p>
       <div id="userReadout">Hi {{userCtrl.userName}}</div>
