@@ -3,10 +3,10 @@
   <head>
     <meta charset="utf-8">
     <title>Cohort Pairing</title>
+    <script src="bower_components/jquery/dist/jquery.js"></script>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap-theme.min.css">
     <link rel="stylesheet" href="css/custom.css">
-    <script src="bower_components/jquery/dist/jquery.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.3.15/angular.min.js"></script>
     <script src="bower_components/angular-resource/angular-resource.js"></script>
@@ -33,7 +33,6 @@
           <ul class="nav navbar-nav navbar-right">
             <li id="pad"><button ng-show="viewCtrl.isView(1)" ng-click="viewCtrl.setView(2)" class="btn btn-warning">Cohort</button></li>
             <li id="pad"><button ng-show="viewCtrl.isView(2)" ng-click="viewCtrl.setView(1)" class="btn btn-warning">Home</button></li>
-            <li id="pad"><button type="submit" class="btn btn-warning">Log out</button></li>
             </ul>
           </ul>
           </form>
@@ -47,7 +46,7 @@
     <div ng-controller="UserController as userCtrl" ng-show="viewCtrl.isView(1)" class="jumbotron" id="wrap">
       <img src="public/makermix_dog.png">
       <h1>What's yo name?</h1>
-      <input type="text" ng-model="userCtrl.userName">
+      <input id="inputBox" type="text" ng-model="userCtrl.userName">
       <p><a class="btn btn-primary btn-lg" id="woofbtn" role="button" ng-click='userCtrl.outputName()'>WOOF!</a></p>
       <div id="userReadout" ng-hide="userCtrl.hidden">Hi {{userCtrl.userName}}</div>
       <div id="pairReadout" ng-hide="userCtrl.hidden">You are paired with {{userCtrl.userBox.name}}</div>
