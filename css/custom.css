@@ -1,4 +1,7 @@
-
+#pairpic {
+  width: 25%;
+  height: 25%;
+}
 
 #wrap {
   width: 50%;
@@ -42,4 +45,13 @@ h2 {
   width: 300px;
   font-size: 16pt;
   padding: 10px;
+}
+
+#white {
+  background-color: #ffffff;
+}
+
+.greeting-text {
+  color: #ffffff;
+  font-size: 16pt;
 }
