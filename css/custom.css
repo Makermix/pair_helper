@@ -43,3 +43,7 @@ h2 {
   font-size: 16pt;
   padding: 10px;
 }
+
+.tables-striped {
+  background-color: #ffffff;
+}
