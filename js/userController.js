@@ -1,8 +1,10 @@
 makerMix.controller('UserController', ['$resource', function($resource) {
     var self = this;
 
+    var URL = 'https://makermix.herokuapp.com/pair/';
+
     self.outputName = function() {
-      self.userBox = self.userName
-      console.log(self.userName);
+      var apiResource = $resource(URL + self.userName);
+      self.userBox = apiResource.get();
     };
 }]);
