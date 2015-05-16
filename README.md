@@ -1,12 +1,9 @@
 #Pair Buddy
 -----------
 
-Do all dev on development branch, don't fuck with master
 
-##Makermix
-------------
-
-The brief
+The brief:
+----------
 
 We would like you to build a pairing organiser for a cohort of Makers' students. We'll get you started with a few user stories:
 

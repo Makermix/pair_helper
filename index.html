@@ -49,7 +49,7 @@
       <input id="inputBox" type="text" ng-model="userCtrl.userName">
       <p><a class="btn btn-warning btn-lg" id="woofbtn" role="button" ng-click='userCtrl.outputName()'>WOOF!</a></p>
       <div id="userReadout" ng-hide="userCtrl.hidden" class="greeting-text">Hi {{userCtrl.userName}}</div>
-      <div id="pairReadout" ng-hide="userCtrl.hidden" class="greeting-text">You are paired with <strong>{{userCtrl.userBox.name}}</strong></div>
+      <div id="pairReadout" ng-hide="userCtrl.hidden" class="greeting-text">you are paired with <strong>{{userCtrl.userBox.name}}</strong></div>
       <div id="errorReadout" ng-hide="userCtrl.errorHidden" class="greeting-text">Name not recognised</div>
 
       <img ng-hide="userCtrl.hidden" ng-src="{{userCtrl.userBox.email}}" id="pairpic">
