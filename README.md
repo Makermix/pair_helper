@@ -1,6 +1,10 @@
 #Pair Buddy
 -----------
 
+###[Use Pair Buddy on Heroku](http://makermix-woof.herokuapp.com/)
+
+![pair buddy screenshot](http://sanjsanj.github.io/images/week9_makermix.png)
+
 
 The brief:
 ----------
@@ -27,24 +31,4 @@ So that I don’t have to ask them
 As an unfriendly maker  
 I want to have a blacklist of students I will never be paired with  
 So that I never have to listen to them speak
-```
-
-Optional
-
-```
-As a security-conscious maker
-I want to be able to log in with a password
-So that nobody can see my lists
-
-As a lazy security-conscious maker
-I want to sign in through github
-So that I don't have to remember another password
-
-As a curious maker
-I want to see other students' github commit history
-So that I can compare my progress to theirs
-
-As a maker with many commits
-I want to be preferentially paired with someone who has fewer commits
-So that I can accelerate our learning by pairing together
 ```
